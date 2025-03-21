@@ -17,25 +17,31 @@
     cp .env.example .env
     ```
 
-3. Build and start the containers:
+3. Install Composer dependencies:
 
     ```bash
-    docker-compose up --build -d
+    docker-compose exec app php composer install
     ```
 
-4. Run the migrations:
+4. Build and start the containers:
+
+    ```bash
+    docker-compose up --build
+    ```
+
+5. Run the migrations:
 
     ```bash
     docker-compose exec app php artisan migrate
     ```
 
-5. Seed the database:
+6. Seed the database:
 
     ```bash
     docker-compose exec app php artisan db:seed
     ```
 
-6. The application will be running on `http://localhost:8000`.
+7. The application will be running on `http://localhost:8000`.
 
 ### Without Docker
 
