@@ -17,16 +17,16 @@
     cp .env.example .env
     ```
 
-3. Install Composer dependencies:
+3. Build and start the containers:
+
+    ```bash
+    docker-compose up --build -d
+    ```
+
+4. Install Composer dependencies:
 
     ```bash
     docker-compose exec app php composer install
-    ```
-
-4. Build and start the containers:
-
-    ```bash
-    docker-compose up --build
     ```
 
 5. Run the migrations:
