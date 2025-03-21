@@ -20,7 +20,7 @@
 3. Build and start the containers:
 
     ```bash
-    docker-compose up --build
+    docker-compose up --build -d
     ```
 
 4. Run the migrations:
